@@ -17,6 +17,8 @@ services:
     build: ./webapp
     ports:
       - "80:80"
+    volumes:
+      - .:/webapp
 
   sonarqube_test:
     image: sonarqube:latest
