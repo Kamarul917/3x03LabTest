@@ -18,6 +18,12 @@ services:
     ports:
       - "80:80"
 
+  sonarqube_test:
+    image: sonarqube:latest
+    container_name: sonarqube_test
+    ports:
+      - "9000:9000" 
+
 volumes:
   jenkins_data:
     driver: local
