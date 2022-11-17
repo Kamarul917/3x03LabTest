@@ -12,13 +12,14 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./jenkins_home:/var/jenkins_home
   
-  webapp:
-    container_name: webapp
+  flaskapp:
+    container_name: flaskapp
     build: ./webapp
     ports:
       - "80:80"
     volumes:
-      - .:/webapp
+      - .:/code
+
 
   sonarqube_test:
     image: sonarqube:latest
